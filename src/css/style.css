@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-family: Roboto, Ubuntu, Cantarell, Helvetica, sans-serif; }
+
+.main-wrapper {
+  background-color: #fff;
+  width: 100%;
+  margin: 0 auto; }
+  .main-wrapper p,
+  .main-wrapper a {
+    font-size: 14px; }
+  .main-wrapper header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/header_background_v1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main-wrapper header * {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+    .main-wrapper header .top-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 0; }
+      .main-wrapper header .top-wrapper nav {
+        width: 55%;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1.5%;
+        padding-right: 1%; }
+        .main-wrapper header .top-wrapper nav a {
+          position: relative;
+          display: block;
+          text-decoration: none;
+          height: 26px;
+          font-weight: bold; }
+          .main-wrapper header .top-wrapper nav a::after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1.5px;
+            background: linear-gradient(to right, #f2994a, #f2c94c);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s; }
+          .main-wrapper header .top-wrapper nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left; }
+    .main-wrapper header section {
+      text-align: center; }
+      .main-wrapper header section h1 {
+        margin-bottom: 2%;
+        font-size: 24px; }
+  .main-wrapper .btn {
+    color: #fff;
+    width: 15vw;
+    padding: 10px 0;
+    background-color: #01acac;
+    border: none;
+    margin-top: 20px;
+    text-transform: uppercase;
+    cursor: pointer; }
+  .main-wrapper main {
+    width: 60%;
+    margin: 0 auto;
+    min-height: 100vh; }
+    .main-wrapper main .toolbar {
+      text-align: right;
+      margin: 20px 5px; }
+      .main-wrapper main .toolbar input {
+        border: 1px solid #6e8895;
+        padding: .375rem .75rem; }
+    .main-wrapper main #list {
+      display: flex;
+      flex-direction: column; }
+      .main-wrapper main #list h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold; }
+      .main-wrapper main #list article {
+        background-color: #efefef;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 20px; }
+        .main-wrapper main #list article img {
+          width: 30%; }
+        .main-wrapper main #list article > div {
+          padding: 9px; }
+          .main-wrapper main #list article > div .post .post-description {
+            color: red;
+            border-bottom: 1px solid #6e8895;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            font-size: 13px; }
+          .main-wrapper main #list article > div .post h3 {
+            line-height: 27px;
+            color: #0d97aa;
+            text-transform: uppercase;
+            font-weight: bold; }
+          .main-wrapper main #list article > div .post p {
+            line-height: 26px; }
+          .main-wrapper main #list article > div .btn {
+            float: right;
+            clear: both;
+            width: 15vw; }
+    .main-wrapper main #about {
+      margin: 25px 7px 45px; }
+      .main-wrapper main #about h1 {
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold; }
+      .main-wrapper main #about p {
+        margin-bottom: 20px;
+        line-height: 26px; }
+    .main-wrapper main #contact {
+      margin-top: 30px; }
+      .main-wrapper main #contact h1,
+      .main-wrapper main #contact h4 {
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: bold;
+        line-height: 25px; }
+      .main-wrapper main #contact form input,
+      .main-wrapper main #contact form textarea {
+        display: block;
+        padding: .375rem .75rem;
+        border: 1px solid #6e8895; }
+      .main-wrapper main #contact form .form-group {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        justify-content: right; }
+        .main-wrapper main #contact form .form-group label {
+          color: #01acac;
+          line-height: 23px;
+          font-size: 14px; }
+      .main-wrapper main #contact form .btn-send {
+        display: flex;
+        justify-content: flex-end; }
+      .main-wrapper main #contact form .row {
+        display: flex;
+        justify-content: space-between; }
+        .main-wrapper main #contact form .row > div {
+          width: 48%; }
+  .main-wrapper footer {
+    width: 100%;
+    padding: 20px;
+    font-size: 14px; }

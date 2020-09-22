@@ -1,0 +1,245 @@
+// Write your styles here
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-family: Roboto, Ubuntu, Cantarell, Helvetica, sans-serif;
+}
+
+.main-wrapper {
+    background-color: $mainBackground;
+    width: 100%;
+    margin: 0 auto;
+
+    p,
+    a {
+        font-size: 14px;
+    }
+
+    header {
+        * {
+            color: $textColor;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        width: 100%;
+        height: 100vh;
+        background-image: url(../img/header_background_v1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .top-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+
+            nav {
+                width: 55%;
+                display: flex;
+                justify-content: space-around;
+                padding-top: 1.5%;
+                padding-right: 1%;
+
+                a {
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    height: 26px;
+                    font-weight: bold;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        height: 1.5px;
+                        background: linear-gradient(to right, #f2994a, #f2c94c);
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+
+            }
+        }
+
+        section {
+            text-align: center;
+
+            h1 {
+                margin-bottom: 2%;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .btn {
+        color: $textColor;
+        width: 15vw;
+        padding: 10px 0;
+        background-color: $buttonColor;
+        border: none;
+        margin-top: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    main {
+        width: 60%;
+        margin: 0 auto;
+        min-height: 100vh;
+
+        .toolbar {
+            text-align: right;
+            margin: 20px 5px;
+
+            input {
+                border: 1px solid $borderColor;
+                padding: .375rem .75rem;
+            }
+        }
+
+        #list {
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                text-align: right;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            article {
+                background-color: #efefef;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                margin-bottom: 20px;
+
+                img {
+                    width: 30%;
+                }
+
+                >div {
+                    padding: 9px;
+
+                    .post {
+                        .post-description {
+                            color: red;
+                            border-bottom: 1px solid $borderColor;
+                            padding-bottom: 5px;
+                            margin-bottom: 5px;
+                            font-size: 13px;
+                        }
+
+                        h3 {
+                            line-height: 27px;
+                            color: $titleColor;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            line-height: 26px;
+                        }
+                    }
+
+                    .btn {
+                        float: right;
+                        clear: both;
+                        width: 15vw;
+                    }
+                }
+            }
+        }
+
+        #about {
+            margin: 25px 7px 45px;
+
+            h1 {
+                text-align: right;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            p {
+                margin-bottom: 20px;
+                line-height: 26px;
+            }
+        }
+
+        #contact {
+            margin-top: 30px;
+
+            h1,
+            h4 {
+                text-transform: uppercase;
+                text-align: right;
+                font-weight: bold;
+                line-height: 25px;
+            }
+
+            form {
+
+                input,
+                textarea {
+                    display: block;
+                    padding: .375rem .75rem;
+                    border: 1px solid $borderColor;
+                }
+
+                .form-group {
+                    label {
+                        color: $buttonColor;
+                        line-height: 23px;
+                        font-size: 14px;
+                    }
+
+                    text-align: right;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 10px;
+                    justify-content: right;
+                }
+
+                .btn-send {
+                    display: flex;
+                    justify-content: flex-end
+                }
+
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+
+                    >div {
+                        width: 48%;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    footer {
+        width: 100%;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
